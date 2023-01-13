@@ -22,9 +22,7 @@ const [rating, setRating] = useState(1);
 
 
   return (
-    <div className="App" 
-    >
-   
+    <div className="App" >
       <NavBar/> 
 
       <FilterByName 

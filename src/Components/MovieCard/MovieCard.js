@@ -2,6 +2,7 @@ import React from 'react'
 import { Button, Card } from 'react-bootstrap'
 import './MovieCard.css'
 import MovieRating from "../Rate/Rating"
+import { Link} from 'react-router-dom';
 const MovieCard = ({movie}) => {
 
   return (
@@ -12,15 +13,17 @@ const MovieCard = ({movie}) => {
         <Card.Title>{movie.title}</Card.Title>
         <Card.Text>{movie.description}</Card.Text>
         <MovieRating  isMovieRating={true} movieRating={movie.rate}/>
-        <div>
-                  <Button variant="primary">See trailer</Button>
-        </div>
-
+        <span>
+        <Link to={`/Description/${movie.id}`} ><Button variant="dark" style={{margin:'2%' }} > See description</Button></Link>      
+        </span>
+        <span>
+     <Button variant="dark" style={{ color:'red' }} ><a href={movie.trailer} target={"blanck"}>
+          see trailer</a> 
+          </Button>      
+        </span>
       </Card.Body>
     </Card>
-
-      
-    </div>
+    </div> 
   )
 }
 

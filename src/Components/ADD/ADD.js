@@ -33,7 +33,7 @@ handleClose();
 }
   return (
     <div className='mod'>
-        <Button variant="primary" onClick={handleShow}>
+        <Button  variant="primary" onClick={handleShow}>
         Add a movie
       </Button>
 
